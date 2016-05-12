@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<!-- created with http://www.physicseditor.de -->
+<!-- 商店所有信息配置 -->
+<plist version="1.0">
+	<dict>
+		<!-- 道具 商品配置 -->
+		<key>daoju</key>
+		<dict>
+			<key>item_1</key>
+			<dict>
+				<key>icon</key>
+				<string>shop/buy-1.png</string>
+				<key>des</key>
+				<string>兔子兔子兔子</string>
+				<key>cost</key>
+				<string>$10</string>
+			</dict>
+			<key>item_2</key>
+			<dict>
+				<key>icon</key>
+				<string>shop/buy-1.png</string>
+				<key>des</key>
+				<string>兔子兔子兔子</string>
+				<key>cost</key>
+				<string>$20</string>
+			</dict>
+			<key>item_3</key>
+			<dict>
+				<key>icon</key>
+				<string>shop/buy-1.png</string>
+				<key>des</key>
+				<string>兔子兔子兔子</string>
+				<key>cost</key>
+				<string>$30</string>
+			</dict>
+		</dict>
+		
+		<!-- 角色 商品配置 -->
+		<key>jiaose</key>
+		<dict>
+			<key>item_1</key>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>des</key>
+				<string>角色1</string>
+				<key>cost</key>
+				<string>￥10</string>
+			</dict>
+			<key>item_2</key>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>des</key>
+				<string>角色2</string>
+				<key>cost</key>
+				<string>￥20</string>
+			</dict>
+			
+		</dict>
+		<!-- 金币 商品配置 -->
+		<key>jinbi</key>
+		<dict>
+			<key>item_1</key>
+			<dict>
+				<key>icon</key>
+				<string>shop/gold-1.png</string>
+				<key>des</key>
+				<string>1000</string>
+				<key>cost</key>
+				<string>￥10</string>
+			</dict>
+			<key>item_2</key>
+			<dict>
+				<key>icon</key>
+				<string>shop/gold-2.png</string>
+				<key>des</key>
+				<string>2000</string>
+				<key>cost</key>
+				<string>￥20</string>
+			</dict>
+			<key>item_3</key>
+			<dict>
+				<key>icon</key>
+				<string>shop/gold-3.png</string>
+				<key>des</key>
+				<string>3000</string>
+				<key>cost</key>
+				<string>￥30</string>
+			</dict>
+		</dict>
+	</dict>
+</plist>
+

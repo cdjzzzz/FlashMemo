@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>foxInfor</key>
+	<dict>
+		<key>level1</key>
+		<dict>
+			<key>foxV</key>
+			<string>250</string>
+			<key>foxForce</key>
+			<string>32</string>
+		</dict>
+<<<<<<< .mine
+		<key>level2</key>
+		<dict>
+			<key>foxV</key>
+			<string>280</string>
+			<key>foxForce</key>
+			<string>40</string>
+		</dict>
+		<key>level3</key>
+		<dict>
+			<key>foxV</key>
+			<string>300</string>
+			<key>foxForce</key>
+			<string>45</string>
+		</dict>
+=======
+		
+		<key>rabbitV</key>
+		<string>250</string>
+		<key>rabbitForce</key>
+		<string>32</string>
+		<key>rabbitMoveBackV</key>
+		<string>120</string>
+		
+		<key>jumpAngel</key>
+		<string>25</string>
+		
+		<key>isDebug</key>
+		<string>0</string>
+		
+		
+		
+		
+		
+		<key>forceOfJump</key>
+		<string>200</string>
+		<key>jumpV</key>
+		<string>700</string>
+		
+		<key>NumOfMushRoom</key>
+		<string>0</string>
+		
+		<key>foxStopTime</key>
+		<string>10</string>
+		
+		<key>productRadian</key>
+		<string>60</string>
+		
+		<key>distanceOfTwoMushRoom</key>
+		<string>15</string>
+		<key>distanceOfTwoGoldMushRoom</key>
+		<string>10</string>
+
+		<key>jumpAngelOfSuperV</key>
+		<string>45</string>
+		<key>carrotNumOfSuperV</key>
+		<string>10</string>
+		<key>forceOfSuperV</key>
+		<string>400</string>
+		<key>superV</key>
+		<string>1400</string>
+		<key>superVTime</key>
+		<string>400</string>
+		
+		<key>carrotPercent</key>
+		<string>20</string>
+		<key>carrotH1</key>
+		<string>50</string>
+		<key>carrotH2</key>
+		<string>100</string>
+		<key>carrotH3</key>
+		<string>150</string>
+		<key>isContactMushRoonAtSuperTime</key>
+		<string>0</string>
+	
+		<key>contactMushRoonIdea</key>
+		<string>2</string>
+		
+		<key>foxVertigoOfStepOn</key>
+		<string>30</string>
+		<key>foxVertigoOfBump</key>
+		<string>60</string>
+		
+		<key>destroyIntervalTime</key>
+		<string>500</string>
+		
+		
+		
+>>>>>>> .r2509
+	</dict>
+	<key>rabbitV</key>
+	<string>250</string>
+	<key>rabbitForce</key>
+	<string>32</string>
+	<key>rabbitMoveBackV</key>
+	<string>120</string>
+	<key>jumpAngel</key>
+	<string>30</string>
+	<key>isDebug</key>
+	<string>0</string>
+	<key>forceOfJump</key>
+	<string>200</string>
+	<key>jumpV</key>
+	<string>700</string>
+	<key>NumOfMushRoom</key>
+	<string>0</string>
+	<key>foxStopTime</key>
+	<string>10</string>
+	<key>productRadian</key>
+	<string>90</string>
+	<key>distanceOfTwoMushRoom</key>
+	<string>15</string>
+	<key>distanceOfTwoGoldMushRoom</key>
+	<string>20</string>
+	<key>jumpAngelOfSuperV</key>
+	<string>45</string>
+	<key>carrotNumOfSuperV</key>
+	<string>10</string>
+	<key>forceOfSuperV</key>
+	<string>250</string>
+	<key>superV</key>
+	<string>600</string>
+	<key>superVTime</key>
+	<string>400</string>
+	<key>carrotPercent</key>
+	<string>20</string>
+	<key>carrotH1</key>
+	<string>50</string>
+	<key>carrotH2</key>
+	<string>100</string>
+	<key>carrotH3</key>
+	<string>150</string>
+	<key>isContactMushRoonAtSuperTime</key>
+	<string>0</string>
+	<key>contactMushRoonIdea</key>
+	<string>2</string>
+	<key>foxVertigoOfStepOn</key>
+	<string>30</string>
+	<key>foxVertigoOfBump</key>
+	<string>60</string>
+	<key>destroyIntervalTime</key>
+	<string>500</string>
+</dict>
+</plist>

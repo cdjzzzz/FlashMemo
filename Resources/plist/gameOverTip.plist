@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<!-- created with http://www.physicseditor.de -->
+
+<plist version="1.0">
+	<dict>
+		<key>level1</key>
+		<dict>
+			<key>num1</key>
+			<string>“菜成狗”</string>
+			<key>num2</key>
+			<string>“呵呵哒，太菜了”</string>
+			<key>num3</key>
+			<string>“别让我在看见你”</string>
+			<key>num4</key>
+			<string>“你被蘑菇采了”</string>
+		</dict>
+		<key>level2</key>
+		<dict>
+			<key>num1</key>
+			<string>“呵呵？被蘑菇卡住了，真是遗憾！”</string>
+			<key>num2</key>
+			<string>“找K啊你”</string>
+			<key>num3</key>
+			<string>“黑色菇是炸弹，不是香菇”</string>
+			<key>num4</key>
+			<string>“你被蘑菇采了”</string>
+		</dict>
+		
+		<key>level3</key>
+		<dict>
+			<key>num1</key>
+			<string>“为了防止破坏，狐狸在黑色菇里动了些手脚”</string>
+			<key>num2</key>
+			<string>“听说有个那美克克星，那里有好多黄金”</string>
+		</dict>
+		
+		<key>level4</key>
+		<dict>
+			<key>num1</key>
+			<string>“跳的越高，摔的越疼哦！”</string>
+			<key>num2</key>
+			<string>“其他的星球会长些什么东西呢”</string>
+			<key>num2</key>
+			<string>“我的嫦娥姐姐呢”</string>
+		</dict>
+		<key>level5</key>
+		<dict>
+			<key>num1</key>
+			<string>“狐狸这一次估计要破产了”</string>
+			<key>num2</key>
+			<string>“你玩大了，听说狐狸找他爸爸去了”</string>
+			<key>num3</key>
+			<string>“狐狸被你欺负惨了，同情他”</string>
+		</dict>
+		<key>level6</key>
+		<dict>
+			<key>num1</key>
+			<string>“占领银河系，指日可待！”</string>
+			<key>num2</key>
+			<string>“说你呢，叫哥！”</string>
+			<key>num3</key>
+			<string>“跑的距离可绕地球800多圈”</string>
+		</dict>
+		
+	</dict>
+</plist>
+
