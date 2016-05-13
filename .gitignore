@@ -7,6 +7,11 @@
 *.userosscache
 *.sln.docstates
 
+#log
+*.tlog
+*.lib
+*.lastbuildstate
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -301,3 +306,34 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.tlog
+cocos2d/cocos/editor-support/spine/proj.win32/Debug.win32/libSpine.tlog/lib.command.1.tlog
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
