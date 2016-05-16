@@ -3,8 +3,22 @@
 
 #include "cocos2d.h"
 
+#include "cocos-ext.h"
+#include "cocostudio/CocoStudio.h"
+#include "ui/CocosGUI.h"
+
 USING_NS_CC;
+using namespace cocostudio;
+using namespace cocos2d::ui;
+USING_NS_CC_EXT;
+
 using namespace std;
+
+typedef struct stTranslate
+{
+	int index;
+	std::string content;
+}stTranslate;
 
 class RandomSymbolScene : public cocos2d::Layer
 {
@@ -24,6 +38,8 @@ public:
 	CREATE_FUNC(RandomSymbolScene);
 
 	// my funciton
+	void preloadTranslation();
+
 	void randomOneSymbol();
 	int randomOneNumFromAll();
 
@@ -32,6 +48,8 @@ private:
 	Node* _listnerNode;
 	Sprite* _newSymbol;
 	Label* _labelTips;
+
+	vector<stTranslate> m_vecTranlation;
 };
 
 

@@ -1,10 +1,17 @@
 #include "randomSymbolScene.h"
 #include "conMacro.h"
 
+USING_NS_CC;
+USING_NS_CC_EXT;
+using namespace cocos2d::ui;
+using namespace cocostudio;
+
+
 RandomSymbolScene::RandomSymbolScene()
 {
 	_newSymbol = NULL;
 	_labelTips = NULL;
+	m_vecTranlation.clear();
 }
 
 RandomSymbolScene::~RandomSymbolScene()
@@ -42,10 +49,12 @@ bool RandomSymbolScene::init()
 	//touchListner->setSwallowTouches(true); //no more dispatch to child
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(touchListner, this);
 
-	_labelTips = Label::createWithTTF("tap to switch the symbol", FONT_CH_NAME, 30);
+	_labelTips = Label::createWithTTF("tap to change", FONT_CH_NAME, 30);
 	_labelTips->setPosition(VISIBLE_MID_X, VISIBLE_SIZE_HEIGHT - 100);
 	addChild(_labelTips);
 	
+	preloadTranslation();
+
 	return true;
 }
 
@@ -71,6 +80,64 @@ void RandomSymbolScene::onTouchEnded(Touch *touch, Event *unused_event)
 	randomOneSymbol();
 }
 
+void RandomSymbolScene::preloadTranslation()
+{
+	//json 文档
+	rapidjson::Document doc;
+	bool bRet = false;
+	ssize_t size = 0;
+	unsigned char *pBytes = NULL;
+	do {
+		pBytes = cocos2d::CCFileUtils::sharedFileUtils()->getFileData("symbol/translate.json", "r", &size);
+		CC_BREAK_IF(pBytes == NULL || strcmp((char*)pBytes, "") == 0);
+		std::string load_str((const char*)pBytes, size);
+		CC_SAFE_DELETE_ARRAY(pBytes);
+		doc.Parse<0>(load_str.c_str());
+		CC_BREAK_IF(doc.HasParseError());			
+		//生成json文档对像
+
+
+
+		// 通过[]取成员值,再根据需要转为array,int,double,string
+		const rapidjson::Value &pArray = doc;
+
+		//是否是数组
+		if(!pArray.IsArray())
+			return;
+
+		for (rapidjson::SizeType i = 0; i < pArray.Size(); i++)
+		{
+			const rapidjson::Value &p = pArray[i];				
+			if(p.HasMember("entity"))
+			{
+				const rapidjson::Value &valueEnt = p["index"];
+				if(valueEnt.HasMember("TapOpposite") && valueEnt.HasMember("Interval") && valueEnt.HasMember("BallNum"))
+				{
+					const rapidjson::Value &tapOpposite = valueEnt["TapOpposite"];
+					int tapOp = tapOpposite.GetInt();      //得到int值
+
+					const rapidjson::Value &interval = valueEnt["Interval"];
+					float inter = interval.GetDouble();  //得到float,double值
+
+					const rapidjson::Value &ballNum = valueEnt["BallNum"];
+					int ball = ballNum.GetInt();      //得到int值
+
+					stTranslate param;
+					//param.index = ;
+					m_vecTranlation.push_back(param);
+				}
+			}
+			else
+			{
+				return;
+			}
+
+		}
+		bRet = true;
+
+	} while (0);
+
+}
 
 void RandomSymbolScene::randomOneSymbol()
 {
