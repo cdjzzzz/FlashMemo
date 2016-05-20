@@ -17,6 +17,7 @@ using namespace std;
 typedef struct stTranslate
 {
 	int index;
+	std::string imagePath;
 	std::string content;
 }stTranslate;
 
@@ -39,17 +40,25 @@ public:
 
 	// my funciton
 	void preloadTranslation();
+	std::string findContentByImagePath(std::string szImagePath);
 
 	void randomOneSymbol();
+	void previouseSymbol();
+	void showSpecificSymbol(int index);
 	int randomOneNumFromAll();
 
+	void menuBackCallback(cocos2d::Ref* pSender);
+	void menuHintCallback(cocos2d::Ref* pSender);
 
 private:
 	Node* _listnerNode;
 	Sprite* _newSymbol;
+	Label* _labelContent;
 	Label* _labelTips;
 
 	vector<stTranslate> m_vecTranlation;
+	int _previouNum;
+	int _currentNum;
 };
 
 
