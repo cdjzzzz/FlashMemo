@@ -4,6 +4,22 @@
 #define FONT_NAME					"fonts/Marker Felt.ttf"
 #define FONT_CH_NAME				"fonts/crazyTrans.ttf"
 
+/////////////////////////////////////////////////////////////////////
+//
+//			Plist const define
+//
+////////////////////////////////////////////////////////////////////
+#define PLiST_TRANSLATE				"symbol/translate.plist"
+#define PLIST_KEY					"symbol"
+/////////////////////////////////////////////////////////////////////
+//
+//			Plist const define end
+//
+////////////////////////////////////////////////////////////////////
+
+#define PIC_PATH_BACK					"commonUI/btnHome.png"
+#define PIC_PATH_HINT					"item/safeBub.png"
+
 #define VISIBLE_SIZE				Director::getInstance()->getVisibleSize()
 #define VISIBLE_SIZE_WIDTH			Director::getInstance()->getVisibleSize().width
 #define VISIBLE_SIZE_HEIGHT			Director::getInstance()->getVisibleSize().height

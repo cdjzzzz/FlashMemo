@@ -176,7 +176,7 @@ bool HelloWorld::onTouchBegan(Touch *touch, Event *unused_event)
 void HelloWorld::onTouchEnded(Touch *touch, Event *unused_event)
 {
 	auto location = touch->getLocation();
-	Director::getInstance()->replaceScene(RandomSymbolScene::createScene());
+	Director::getInstance()->pushScene(RandomSymbolScene::createScene());
 }
 
 void HelloWorld::armatureLoading()
@@ -198,7 +198,7 @@ void HelloWorld::btnCallBack(Ref *pSender, Widget::TouchEventType type)
 
 		if (btn->getName() == "Button_start")
 		{
-			Director::getInstance()->replaceScene(RandomSymbolScene::createScene());
+			Director::getInstance()->pushScene(RandomSymbolScene::createScene());
 		}
 		else if (btn->getName() == "Button_setting")
 		{
