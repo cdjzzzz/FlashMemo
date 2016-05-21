@@ -202,8 +202,7 @@ void HelloWorld::btnCallBack(Ref *pSender, Widget::TouchEventType type)
 		}
 		else if (btn->getName() == "Button_setting")
 		{
-			//
-			showSettings();
+			Director::getInstance()->pushScene(RandomSymbolScene::createScene(1));
 		}
 	}
 }

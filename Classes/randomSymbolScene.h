@@ -26,8 +26,8 @@ class RandomSymbolScene : public cocos2d::Layer
 public:
 	RandomSymbolScene();
 	~RandomSymbolScene();
-	static Scene* createScene();
-	bool init();
+	static Scene* createScene(int mode = 0);
+	bool init(int mode);
 
 	void onEnter();
 	void onExit();
@@ -36,7 +36,7 @@ public:
 	void onTouchMoved(Touch *touch, Event *unused_event);
 	void onTouchEnded(Touch *touch, Event *unused_event);
 
-	CREATE_FUNC(RandomSymbolScene);
+	static RandomSymbolScene* create(int mode);
 
 	// my funciton
 	void preloadTranslation();
@@ -44,13 +44,16 @@ public:
 
 	void randomOneSymbol();
 	void previouseSymbol();
+	void showByOrderSymbol();
 	void showSpecificSymbol(int index);
+
 	int randomOneNumFromAll();
 
 	void menuBackCallback(cocos2d::Ref* pSender);
 	void menuHintCallback(cocos2d::Ref* pSender);
 
 private:
+	int _mode;
 	Node* _listnerNode;
 	Sprite* _newSymbol;
 	Label* _labelContent;

@@ -33,18 +33,35 @@ void RandomSymbolScene::onExit()
 	CCLayer::onExit();
 }
 
-Scene* RandomSymbolScene::createScene()
+Scene* RandomSymbolScene::createScene(int mode)
 {
 	auto scene = Scene::create();
 
-	auto layer = RandomSymbolScene::create();
+	auto layer = RandomSymbolScene::create(mode);
 
 	scene->addChild(layer, 0);
 	return scene;
 }
 
-bool RandomSymbolScene::init()
+RandomSymbolScene* RandomSymbolScene::create(int mode)
 {
+	RandomSymbolScene* pRet = new(std::nothrow) RandomSymbolScene();
+	if(pRet &&pRet->init(mode))
+	{
+		pRet->autorelease();
+		return pRet;
+	}
+	else
+	{
+		delete pRet;
+		pRet = NULL;
+		return NULL;
+	}
+}
+
+bool RandomSymbolScene::init(int mode)
+{
+	_mode = mode;
 	auto touchListner = EventListenerTouchOneByOne::create();
 	touchListner->onTouchBegan = CC_CALLBACK_2(RandomSymbolScene::onTouchBegan, this);
 	touchListner->onTouchMoved = CC_CALLBACK_2(RandomSymbolScene::onTouchMoved, this);
@@ -96,7 +113,12 @@ void RandomSymbolScene::onTouchEnded(Touch *touch, Event *unused_event)
 	if(pt.x > VISIBLE_MID_X && pt.y < VISIBLE_MID_Y)
 	{
 		// right down corner
-		randomOneSymbol();
+		if(_mode == 0)
+			randomOneSymbol();
+		else if(_mode == 1)
+		{
+			showByOrderSymbol();
+		}
 	}
 	else if(pt.x < VISIBLE_MID_X && pt.y < VISIBLE_MID_Y)
 	{
@@ -161,6 +183,20 @@ void RandomSymbolScene::previouseSymbol()
 		showSpecificSymbol(_previouNum);
 }
 
+void RandomSymbolScene::showByOrderSymbol()
+{
+	//int tmpIndex = _previouNum;
+
+	_previouNum = _currentNum;
+	_currentNum = _currentNum + 1;
+	if(_currentNum > MAX_SYMBOL_NUM)
+	{
+		_currentNum = 1;
+	}
+
+	showSpecificSymbol(_currentNum);
+}
+
 void RandomSymbolScene::showSpecificSymbol(int index)
 {
 	if (_newSymbol)
@@ -194,7 +230,7 @@ void RandomSymbolScene::showSpecificSymbol(int index)
 
 int RandomSymbolScene::randomOneNumFromAll()
 {
-	return rand() % 22 + 1;
+	return rand() % MAX_SYMBOL_NUM + 1;
 }
 
 void RandomSymbolScene::menuBackCallback(cocos2d::Ref* pSender)
